@@ -7,3 +7,8 @@ server:
 spring:
   application:
     name: service-feign
+
+#  feign已经集成了hystrix，需要手动开启
+feign:
+  hystrix:
+    enabled: true
