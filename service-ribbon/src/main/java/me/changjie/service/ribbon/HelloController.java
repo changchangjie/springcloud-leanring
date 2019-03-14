@@ -21,7 +21,8 @@ public class HelloController {
         return restTemplate.getForObject("http://service-provider/hi?name="+name, String.class);
     }
 
-    public String hiError(String name) {
+    public String hiError(String name, Throwable throwable) {
+        throwable.printStackTrace();
         return "hi,"+name+",sorry,error!";
     }
 }
