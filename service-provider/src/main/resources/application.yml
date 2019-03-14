@@ -4,7 +4,7 @@ server:
 #  服务与服务之间相互调用一般都是根据这个name
 spring:
   application:
-    name: eureka-provider
+    name: service-provider
 
 eureka:
   client:

@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>me.changjie</groupId>
-    <artifactId>service-consumer</artifactId>
+    <artifactId>service-ribbon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
