@@ -21,6 +21,8 @@
         <module>service-zuul</module>
         <module>config-server</module>
         <module>config-client</module>
+        <module>service-zipkin1</module>
+        <module>service-zipkin2</module>
     </modules>
 
     <properties>
