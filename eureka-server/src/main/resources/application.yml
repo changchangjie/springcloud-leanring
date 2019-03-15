@@ -12,6 +12,13 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
+  server:
+    #开启自我保护模式
+    enable-self-preservation: false
+    #清理无效节点,默认60*1000毫秒,即60秒
+    #EurekaServer在启动的时候会创建一个定时任务默认每隔一段时间(默认为60秒)将当前清单中超时(默认为90秒)没有续约的服务从注册中心剔除
+    eviction-interval-timer-in-ms: 5000
+
 spring:
   application:
     name: eurka-server
