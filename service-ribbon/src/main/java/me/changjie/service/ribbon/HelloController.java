@@ -18,6 +18,8 @@ public class HelloController {
     @RequestMapping(value = "hi")
 //    @HystrixCommand(fallbackMethod = "hiError")
     public String hello(String name){
+        //需要取消loadBalance注解
+//        return restTemplate.getForObject("http://localhost:8762/hi?name="+name, String.class);
         return restTemplate.getForObject("http://service-provider/hi?name="+name, String.class);
     }
 
