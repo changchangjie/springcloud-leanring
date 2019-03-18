@@ -16,7 +16,7 @@ public class HelloController {
     private RestTemplate restTemplate;
 
     @RequestMapping(value = "hi")
-    @HystrixCommand(fallbackMethod = "hiError")
+//    @HystrixCommand(fallbackMethod = "hiError")
     public String hello(String name){
         return restTemplate.getForObject("http://service-provider/hi?name="+name, String.class);
     }
