@@ -10,3 +10,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+
+
+
+    #表示eureka client间隔多久去拉取服务器注册信息,默认为30秒
+    registry-fetch-interval-seconds: 30
+
+  instance:
+        #eureka客户端需要多长时间发送心跳给eureka服务器，表明他仍然或者，默认30秒
+      lease-renewal-interval-in-seconds: 30
+        #eureka服务器在接受到实力的最后一次发出的心跳后，需要等待多久才可以将此实力删除
+      lease-expiration-duration-in-seconds: 90
